@@ -9,7 +9,6 @@ describe('BreadcrumbPresenter', () => {
   const { CollectionFactory, SnippetFactory, CollectionSnippetFactory } =
     Loader.buildFactories();
 
-  const mainCollection = CollectionFactory.create('main');
   const primaryCollection = CollectionFactory.create('primary', {
     id: 'js',
     miniTitle: 'JavaScript',
@@ -29,19 +28,6 @@ describe('BreadcrumbPresenter', () => {
     id: 'js/s/my-snippet',
     shortTitle: 'My snippet',
     tags: 'array;object',
-  });
-
-  const collectionSnippetPrimary = CollectionSnippetFactory.create({
-    collectionId: primaryCollection.id,
-    snippetId: snippet.id,
-  });
-  const collectionSnippetSecondary = CollectionSnippetFactory.create({
-    collectionId: secondaryCollection.id,
-    snippetId: snippet.id,
-  });
-  const collectionSnippetOtherSecondary = CollectionSnippetFactory.create({
-    collectionId: otherSecondaryCollection.id,
-    snippetId: snippet.id,
   });
 
   const snippetPresenter = new BreadcrumbPresenter(snippet);

@@ -7,7 +7,6 @@ describe('Snippet', () => {
   const { SnippetFactory, CollectionSnippetFactory, LanguageFactory } =
     Loader.buildFactories();
 
-  const javascriptLanguage = LanguageFactory.create('js');
 
   const publishedSnippet = SnippetFactory.create('published');
   const scheduledSnippet = SnippetFactory.create('scheduled');
@@ -17,9 +16,6 @@ describe('Snippet', () => {
   const listedSnippet = SnippetFactory.create('listed');
   const unlistedSnippet = SnippetFactory.create('unlisted');
 
-  const collectionSnippet = CollectionSnippetFactory.create({
-    snippetId: 'js/s/my-collection-snippet',
-  });
   const snippetWithCollection = SnippetFactory.create({
     id: 'js/s/my-collection-snippet',
   });

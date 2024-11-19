@@ -5,8 +5,6 @@ import RecommendationPresenter from '#src/presenters/recommendationPresenter.js'
 
 describe('RecommendationPresenter', () => {
   Loader.loadModules();
-  const { CollectionFactory, SnippetFactory, CollectionSnippetFactory } =
-    Loader.buildFactories();
 
   const snippet = SnippetFactory.create({
     languageId: 'javascript',

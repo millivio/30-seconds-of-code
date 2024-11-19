@@ -18,11 +18,6 @@ describe('SublinkPresenter', () => {
     parentId: 'js',
     miniTitle: 'Array',
   });
-  const otherSecondaryCollection = CollectionFactory.create('secondary', {
-    id: 'js/c/object',
-    parentId: 'js',
-    miniTitle: 'Object',
-  });
   const orphanedSecondaryCollection = CollectionFactory.create('secondary', {
     id: 'js/c/number',
     miniTitle: 'Number',
